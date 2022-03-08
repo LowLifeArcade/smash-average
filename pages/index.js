@@ -20,13 +20,31 @@ const Main = styled.main`
 `;
 
 const Hero = styled.div`
-  height: 500px;
+  height: 300px;
   width: 100%;
   background: plum;
+  /* z-index: -1; */
 `;
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* position: absolute; */
+`;
+
+const TierListContainer = styled.div`
+  /* position: absolute; */
+`;
+
+const TierList = styled.div`
+  top: -100px;
   width: 1000px;
+  /* position: relative; */
+  background: beige;
+  height: 1000px;
 `;
 
 export default function Home() {
@@ -41,8 +59,12 @@ export default function Home() {
       <Nav></Nav>
 
       <Main>
-        <Hero>Hero</Hero>
-        <Container>stuffff</Container>
+        <Container>
+          <Hero>Hero</Hero>
+          <TierListContainer>
+            <TierList>List</TierList>
+          </TierListContainer>
+        </Container>
       </Main>
 
       <Footer></Footer>
