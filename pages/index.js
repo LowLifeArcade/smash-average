@@ -8,10 +8,25 @@ const Nav = styled.nav`
 
 const Footer = styled.footer`
   background: gray;
+  height: 300px;
 `;
 
 const Main = styled.main`
   background: firebrick;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Hero = styled.div`
+  height: 500px;
+  width: 100%;
+  background: plum;
+`;
+
+const Container = styled.div`
+  width: 1000px;
 `;
 
 export default function Home() {
@@ -25,9 +40,12 @@ export default function Home() {
 
       <Nav></Nav>
 
-      <Main>test</Main>
+      <Main>
+        <Hero>Hero</Hero>
+        <Container>stuffff</Container>
+      </Main>
 
-      <Footer>Smash Footer</Footer>
+      <Footer></Footer>
     </div>
   );
 }
