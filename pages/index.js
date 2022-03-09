@@ -180,14 +180,33 @@ const TierTitle = styled.div`
 `;
 
 const TierBar = styled.div`
-  background: red;
-  width: 150px;
-  display: flex;
-  align-items: center; 
-  padding-left: 5px;
+  & {
+    background: red;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px; 
+  }
+  &:after {
+    border-right: solid 20px transparent;
+    border-left: solid 20px transparent;
+    border-top: solid 20px blue;
+    transform: translateX(80%);
+    /* position: absolute; */
+    z-index: 1;
+    content: '';
+    /* top: 70%;
+    left: 30%;
+    height: 0;
+    width: 0; */
+  }
 `;
 const TierBarOverlay = styled.div`
   background: beige;
+  width: 100%;
+  margin-bottom: 5px;
 `;
 
 export default function Home() {
