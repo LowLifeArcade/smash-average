@@ -173,10 +173,10 @@ const CharacterName = styled.div`
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 `;
 
-// const TierTitle = styled.div`
-//   height: 40px;
-//   background: black;
-// `;
+const TierTitle = styled.div`
+  height: 40px;
+  background: black;
+`;
 
 export default function Home() {
   return (
