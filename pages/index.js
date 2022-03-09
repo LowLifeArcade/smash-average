@@ -191,8 +191,8 @@ const TierBar = styled.div`
   }
   &:after {
     border-right: solid 20px transparent;
-    border-left: solid 20px transparent;
-    border-top: solid 20px blue;
+    /* border-left: solid 20px transparent; */
+    border-top: solid 33px blue;
     transform: translateX(80%);
     /* position: absolute; */
     z-index: 1;
@@ -203,6 +203,23 @@ const TierBar = styled.div`
     width: 0; */
   }
 `;
+
+const TierBarSeporator = styled.div` 
+  &:after {
+    border-right: solid 20px transparent;
+    /* border-left: solid 20px transparent; */
+    border-top: solid 33px blue;
+    transform: translateX(80%);
+    /* position: absolute; */
+    z-index: 1;
+    content: '';
+    /* top: 70%;
+    left: 30%;
+    height: 0;
+    width: 0; */
+  }
+`
+
 const TierBarOverlay = styled.div`
   background: beige;
   width: 100%;
@@ -249,6 +266,7 @@ export default function Home() {
               <TierSection>
                 <TierTitle>
                   <TierBar>S Tier</TierBar>
+                  <TierBarSeporator></TierBarSeporator>
                   <TierBarOverlay></TierBarOverlay>
                 </TierTitle>
 
