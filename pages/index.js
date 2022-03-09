@@ -178,6 +178,10 @@ const TierTitle = styled.div`
   background: black;
 `;
 
+const TierBar = styled.div`
+  background: red;
+`
+
 export default function Home() {
   return (
     <div>
@@ -216,7 +220,9 @@ export default function Home() {
               </TierListBanner>
 
               <TierSection>
-                <TierTitle />
+                <TierTitle >
+                  <TierBar>S Tier</TierBar>
+                </TierTitle>
 
                 <CardContainer>
                   <CharacterRankContainer>
