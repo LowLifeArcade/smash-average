@@ -174,13 +174,21 @@ const CharacterName = styled.div`
 `;
 
 const TierTitle = styled.div`
+  display: flex;
   height: 40px;
   background: black;
 `;
 
 const TierBar = styled.div`
   background: red;
-`
+  width: 150px;
+  display: flex;
+  align-items: center; 
+  padding-left: 5px;
+`;
+const TierBarOverlay = styled.div`
+  background: beige;
+`;
 
 export default function Home() {
   return (
@@ -220,8 +228,9 @@ export default function Home() {
               </TierListBanner>
 
               <TierSection>
-                <TierTitle >
+                <TierTitle>
                   <TierBar>S Tier</TierBar>
+                  <TierBarOverlay></TierBarOverlay>
                 </TierTitle>
 
                 <CardContainer>
