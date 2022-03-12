@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import styled from 'styled-components';
 import Image from 'next/image';
+import styled from 'styled-components';
 
 const Nav = styled.nav`
   height: 50px;
@@ -187,38 +187,30 @@ const TierBar = styled.div`
     align-items: center;
     padding-left: 5px;
     margin-bottom: 5px;
-    margin-right: 5px; 
-  }
-  &:after {
-    border-right: solid 20px transparent;
-    /* border-left: solid 20px transparent; */
-    border-top: solid 33px blue;
-    transform: translateX(80%);
-    /* position: absolute; */
-    z-index: 1;
-    content: '';
-    /* top: 70%;
-    left: 30%;
-    height: 0;
-    width: 0; */
+    /* margin-right: 5px;  */
   }
 `;
 
-const TierBarSeporator = styled.div` 
-  &:after {
+const TierBarSeporator = styled.div`
+  & {
     border-right: solid 20px transparent;
     /* border-left: solid 20px transparent; */
-    border-top: solid 33px blue;
-    transform: translateX(80%);
+    border-top: solid 36px red;
+    /* transform: translateX(70%); */
     /* position: absolute; */
-    z-index: 1;
+    /* z-index: 1;
     content: '';
-    /* top: 70%;
+    top: 70%;
     left: 30%;
     height: 0;
     width: 0; */
   }
-`
+  &:after {
+    border-left: solid 20px transparent;
+    /* border-left: solid 20px transparent; */
+    border-bottom: solid 36px beige;
+  }
+`;
 
 const TierBarOverlay = styled.div`
   background: beige;
@@ -288,6 +280,7 @@ export default function Home() {
                     <CharacterName>Byleth</CharacterName>
                   </CharacterCard>
                 </CardContainer>
+                
               </TierSection>
             </TierList>
           </TierListContainer>
