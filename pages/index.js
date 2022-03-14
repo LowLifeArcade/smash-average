@@ -150,7 +150,7 @@ const RankSpacer = styled.div`
   height: 30px;
 `;
 
-const CharacterAvatar = styled.div`
+const CharacterAvatarFrame = styled.div`
   height: 75px;
   width: 75px;
   border-radius: 50px;
@@ -160,6 +160,19 @@ const CharacterAvatar = styled.div`
   align-items: center;
   border: solid 3px gray;
 `;
+
+const CharacterAvatar = ({url}) => {
+  return (
+    <CharacterAvatarFrame>
+      <Image
+        src={url}
+        layout="fixed"
+        height={75}
+        width={75}
+      />
+    </CharacterAvatarFrame>
+  );
+};
 
 const CharacterName = styled.div`
   color: #e4dfb9;
@@ -184,18 +197,19 @@ const TierBar = styled.div`
     background: red;
     width: 150px;
     display: flex;
-    align-items: center;
-    padding-left: 5px;
+    align-items: center; 
+    padding: 5px;
     margin-bottom: 5px;
     /* margin-right: 5px;  */
   }
 `;
 
-const TierBarSeporator = styled.div`
-  & {
+const TierBarSeparator = styled.div`
+  &:before {
+    content: '';
     border-right: solid 20px transparent;
     /* border-left: solid 20px transparent; */
-    border-top: solid 36px red;
+    border-top: solid 36px blue;
     /* transform: translateX(70%); */
     /* position: absolute; */
     /* z-index: 1;
@@ -206,9 +220,10 @@ const TierBarSeporator = styled.div`
     width: 0; */
   }
   &:after {
-    border-left: solid 20px transparent;
+    content: '';
     /* border-left: solid 20px transparent; */
-    border-bottom: solid 36px beige;
+    /* border-left: solid 20px transparent; */
+    border: solid 40px beige;
   }
 `;
 
@@ -216,6 +231,7 @@ const TierBarOverlay = styled.div`
   background: beige;
   width: 100%;
   margin-bottom: 5px;
+  margin-left: 5px;
 `;
 
 export default function Home() {
@@ -258,7 +274,7 @@ export default function Home() {
               <TierSection>
                 <TierTitle>
                   <TierBar>S Tier</TierBar>
-                  <TierBarSeporator></TierBarSeporator>
+                  <TierBarSeparator></TierBarSeparator>
                   <TierBarOverlay></TierBarOverlay>
                 </TierTitle>
 
@@ -269,18 +285,10 @@ export default function Home() {
                   </CharacterRankContainer>
 
                   <CharacterCard>
-                    <CharacterAvatar>
-                      <Image
-                        src="/characters/Byleth.png"
-                        layout="fixed"
-                        height={75}
-                        width={75}
-                      />
-                    </CharacterAvatar>
+                    <CharacterAvatar url="/characters/Byleth.png" />
                     <CharacterName>Byleth</CharacterName>
                   </CharacterCard>
                 </CardContainer>
-                
               </TierSection>
             </TierList>
           </TierListContainer>
