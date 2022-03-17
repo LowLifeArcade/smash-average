@@ -161,15 +161,10 @@ const CharacterAvatarFrame = styled.div`
   border: solid 3px gray;
 `;
 
-const CharacterAvatar = ({url}) => {
+const CharacterAvatar = ({ url }) => {
   return (
     <CharacterAvatarFrame>
-      <Image
-        src={url}
-        layout="fixed"
-        height={75}
-        width={75}
-      />
+      <Image src={url} layout="fixed" height={75} width={75} />
     </CharacterAvatarFrame>
   );
 };
@@ -197,7 +192,7 @@ const TierBar = styled.div`
     background: red;
     width: 150px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     padding: 5px;
     margin-bottom: 5px;
     /* margin-right: 5px;  */
@@ -207,9 +202,9 @@ const TierBar = styled.div`
 const TierBarSeparator = styled.div`
   &:before {
     content: '';
-    border-right: solid 20px transparent;
+    /* border-right: solid 20px transparent; */
     /* border-left: solid 20px transparent; */
-    border-top: solid 36px blue;
+    /* border-top: solid 36px blue; */
     /* transform: translateX(70%); */
     /* position: absolute; */
     /* z-index: 1;
@@ -221,9 +216,13 @@ const TierBarSeparator = styled.div`
   }
   &:after {
     content: '';
+    display: block; 
     /* border-left: solid 20px transparent; */
-    /* border-left: solid 20px transparent; */
-    border: solid 40px beige;
+    /* border: solid 30px beige; */
+    height: 35px;
+    background: orange;
+    width: 30px;
+    
   }
 `;
 
